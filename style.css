@@ -14,13 +14,20 @@ body{
     
 }
 .backgroundBlack{
-    border-radius: 0px 10px 0px 0px;
+    border-radius: 0px 30px 0px 0px;
     background-color: #333333;
     height: 100vh;
-    width: 100px;
+    width: 30%;
     position: absolute;
-    z-index: -100;
+    z-index: -1;
     
+}
+.backgroundWhite{
+    position: absolute;
+    z-index: -2;
+    background-color: var(--white);
+    height: 100vh;
+    width: 100%;
 }
 
 .content{
@@ -34,15 +41,27 @@ body{
     }
 header{
     grid-column: 1/12;
-    grid-row: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(2,auto);
     background-color: var(--yellow);
-    border-radius: 7px;
+    border-radius: 10px;
     font-size:x-small;
     text-align: end;
+    border:#F2F2F2 2px solid ;
+}
+img{
+    height: 50px;
+    margin-left: 30px;
 }
 
 h1{
+    align-self: center;
+    justify-self: center;
     font-weight: 100;
     margin: auto;
+    font-size:x-large;
     margin: 10px 10px 15px 10px;
+
 }
