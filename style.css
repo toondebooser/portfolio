@@ -40,6 +40,7 @@ body{
     grid-auto-rows: max-content;
     }
 header{
+    margin-left: 15px;
     grid-column: 1/12;
     grid-row: 1/2;
     display: grid;
@@ -65,3 +66,9 @@ h1{
     margin: 10px 10px 15px 10px;
 
 }
+canvas{
+    height: inherit;
+}
+/* @media screen (max-width: 600px){
+    
+} */
