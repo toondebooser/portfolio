@@ -4,11 +4,12 @@ const blackElement = document.querySelector(".backgroundBlack");
 ctx = canvas.getContext("2d");
 
 // Setting the width and height of the canvas
-canvas.width = 20;
+canvas.width = 20 ;
 canvas.height = window.innerHeight;
 
 // Setting up the letters
-var letters = "TOON";
+var letters =
+  "ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ";
 letters = letters.split("");
 
 // Setting up the columns
@@ -23,7 +24,7 @@ for (var i = 0; i < columns; i++) {
 
 // Setting up the draw function
 function draw() {
-  ctx.fillStyle = "rgba(51, 51, 51,.1)";
+  ctx.fillStyle = "rgba(51, 51, 51, .1)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
@@ -37,4 +38,4 @@ function draw() {
 }
 
 // Loop the animation
-setInterval(draw, 50);
+setInterval(draw, 33);
