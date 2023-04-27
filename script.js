@@ -31,7 +31,7 @@ function draw() {
     ctx.fillStyle = "#FFC000";
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
-    if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+    if (drops[i] * fontSize > canvas.height*2 && Math.random() > 0.95) {
       drops[i] = 0;
     }
   }
