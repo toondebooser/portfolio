@@ -137,6 +137,7 @@ canvas{
     height: 50%;
 }
 .arrow{
+    cursor: pointer;
     margin-top: 20px;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -187,15 +188,25 @@ main{
     grid-column: 5/13;
     grid-row: 2/3;
     height: 100%;
+    transition: filter 0.5s;
     
+}
+main.blur.active{
+filter: blur(8px);
 }
 main.active{
     z-index: -2;
+    filter: blur(0px);
 }
 
 .maincontent{
     background-color:lightgray;
     grid-column: 1/13;
+    transition: scale 0.5s;
+}
+.maincontent:hover{
+    scale: 1.05;
+    cursor: pointer;
 }
   .slider::-webkit-slider-thumb {
     appearance: none;

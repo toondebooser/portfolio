@@ -53,7 +53,7 @@ const removeDelay = () => {
   }
   else{
   main.classList.remove("active");
-  }
+}
 };
 const activate = () => {
   if (personalInfo.classList.contains("active")) {
@@ -63,6 +63,7 @@ const activate = () => {
     icons.classList.remove("active");
     contactTitle.classList.remove("active");
     contact.classList.remove("active");
+    main.classList.remove('blur')
     setTimeout(removeDelay, 1000)
   } else {
     personalInfo.classList.add("active");
@@ -72,5 +73,6 @@ const activate = () => {
     contactTitle.classList.add("active");
     contact.classList.add("active");
     main.classList.add("active");
+    main.classList.add('blur')
   }
 };
