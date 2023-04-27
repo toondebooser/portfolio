@@ -4,34 +4,101 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./script.js"></script>
     <title>Portfolio</title>
   </head>
   <body>
-    
     <div class="content">
-      <div class="backgroundBlack"><canvas></canvas>
-        
-      </div>
+      <div class="backgroundBlack"><canvas></canvas></div>
       <nav></nav>
       <div class="backgroundWhite"></div>
       <header>
-        <img class="profile" src="./img/Afbeelding1.png" alt="you fucked up" />
+        <img class="profile" src="./img/Afbeelding1.png" alt="profilePicture" />
         <h1>&lt/ Toon De Booser &gt</h1>
       </header>
       <main>
-        <div class="icons"></div>
-        <img class="arrow" src="./img/arrow.png" alt="you fucked up" onclick="activate()">
-        <div class="personalDescription">
-                <span class="profileTitle">Profile   </span> <span class="maleIcon"><img  src="./img/male.svg" alt="you fucked up"></span><br>
-                <span class="profileText">Sincere and honest guy capable of finding creative solutions with a sharp eye for detail.</span>
-            </div>
-            
-          </main>
+        <div class="icons">
+          <img src="./img/Afbeelding2.svg" alt="mapIcon" />
         </div>
-        <footer> &copy Toon De Booser</footer>
-    
+        <img
+          class="arrow"
+          src="./img/arrow.png"
+          alt="arrowicon"
+          onclick="activate()"
+        />
+        <div class="personalDescription">
+          <span class="profileTitle">Profile </span>
+          <span class="maleIcon"
+            ><img src="./img/male.svg" alt="you fucked up" /></span
+          ><br />
+          <span class="profileText"
+            >Sincere and honest guy capable of finding creative solutions with a
+            sharp eye for detail.</span
+          ><br /><br />
+
+          <span class="skillTitle">Skills</span>
+          <div class="slidecontainer">
+            <p class="slideLabels">Creativity</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="100"
+              class="slider"
+              class="slider"
+            />
+            <p class="slideLabels">Problem solving</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="90"
+              class="slider"
+              class="slider"
+            />
+            <p class="slideLabels">HTML</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="85"
+              class="slider"
+              class="slider"
+            />
+            <p class="slideLabels">CSS</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="87"
+              class="slider"
+              class="slider"
+            />
+            <p class="slideLabels">Javascript</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="75"
+              class="slider"
+              class="slider"
+            />
+            <p class="slideLabels">PHP</p>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="70"
+              class="slider"
+              class="slider"
+            />
+            <br><br>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>&copy Toon De Booser</footer>
   </body>
 </html>

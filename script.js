@@ -24,7 +24,7 @@ for (var i = 0; i < columns; i++) {
 
 // Setting up the draw function
 function draw() {
-  ctx.fillStyle = "rgba(51, 51, 51, .1)";
+  ctx.fillStyle = "rgba(51, 51, 51, .5)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
@@ -43,16 +43,19 @@ setInterval(draw, 33);
 const personalInfo = document.querySelector('.personalDescription');
 const arrowIcon = document.querySelector('.arrow');
 const backgroundBlack = document.querySelector('.backgroundBlack');
+const icons = document.querySelector('.icons')
 
 const activate = () =>{
   if (personalInfo.classList.contains('active')){
     personalInfo.classList.remove('active');
     arrowIcon.classList.remove('active')
     backgroundBlack.classList.remove('active');
+    icons.classList.remove('active');
   }
   else{
   personalInfo.classList.add('active')
   arrowIcon.classList.add('active')
   backgroundBlack.classList.add('active')
+  icons.classList.add('active');
   }
 }
