@@ -4,7 +4,7 @@ const blackElement = document.querySelector(".backgroundBlack");
 ctx = canvas.getContext("2d");
 
 // Setting the width and height of the canvas
-canvas.width = 20 ;
+canvas.width = 20;
 canvas.height = window.innerHeight;
 
 // Setting up the letters
@@ -14,7 +14,7 @@ letters = letters.split("");
 
 // Setting up the columns
 var fontSize = 10,
-  columns = canvas.width / fontSize ;
+  columns = canvas.width / fontSize;
 
 // Setting up the drops
 var drops = [];
@@ -31,7 +31,7 @@ function draw() {
     ctx.fillStyle = "#FFC000";
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
-    if (drops[i] * fontSize > canvas.height*2 && Math.random() > 0.95) {
+    if (drops[i] * fontSize > canvas.height * 2 && Math.random() > 0.95) {
       drops[i] = 0;
     }
   }
@@ -40,28 +40,32 @@ function draw() {
 // Loop the animation
 setInterval(draw, 33);
 
-const personalInfo = document.querySelector('.personalDescription');
-const arrowIcon = document.querySelector('.arrow');
-const backgroundBlack = document.querySelector('.backgroundBlack');
-const icons = document.querySelector('.icons');
-const contactTitle = document.querySelector('.contactTitle')
-const contact = document.querySelector('.contact')
-
-const activate = () =>{
-  if (personalInfo.classList.contains('active')){
-    personalInfo.classList.remove('active');
-    arrowIcon.classList.remove('active')
-    backgroundBlack.classList.remove('active');
-    icons.classList.remove('active');
-    contactTitle.classList.remove('active')
-    contact.classList.remove('active')
+const personalInfo = document.querySelector(".personalDescription");
+const arrowIcon = document.querySelector(".arrow");
+const backgroundBlack = document.querySelector(".backgroundBlack");
+const icons = document.querySelector(".icons");
+const contactTitle = document.querySelector(".contactTitle");
+const contact = document.querySelector(".contact");
+const main = document.querySelector("main");
+const removeDelay = () => {
+  main.classList.remove("active");
+};
+const activate = () => {
+  if (personalInfo.classList.contains("active")) {
+    personalInfo.classList.remove("active");
+    arrowIcon.classList.remove("active");
+    backgroundBlack.classList.remove("active");
+    icons.classList.remove("active");
+    contactTitle.classList.remove("active");
+    contact.classList.remove("active");
+    setTimeout(removeDelay, 1000)
+  } else {
+    personalInfo.classList.add("active");
+    arrowIcon.classList.add("active");
+    backgroundBlack.classList.add("active");
+    icons.classList.add("active");
+    contactTitle.classList.add("active");
+    contact.classList.add("active");
+    main.classList.add("active");
   }
-  else{
-  personalInfo.classList.add('active')
-  arrowIcon.classList.add('active')
-  backgroundBlack.classList.add('active')
-  icons.classList.add('active');
-  contactTitle.classList.add('active')
-  contact.classList.add('active')
-  }
-}
+};
