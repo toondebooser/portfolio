@@ -39,3 +39,20 @@ function draw() {
 
 // Loop the animation
 setInterval(draw, 33);
+
+const personalInfo = document.querySelector('.personalDescription');
+const arrowIcon = document.querySelector('.arrow');
+const backgroundBlack = document.querySelector('.backgroundBlack');
+
+const activate = () =>{
+  if (personalInfo.classList.contains('active')){
+    personalInfo.classList.remove('active');
+    arrowIcon.classList.remove('active')
+    backgroundBlack.classList.remove('active');
+  }
+  else{
+  personalInfo.classList.add('active')
+  arrowIcon.classList.add('active')
+  backgroundBlack.classList.add('active')
+  }
+}
