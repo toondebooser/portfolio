@@ -48,7 +48,12 @@ const contactTitle = document.querySelector(".contactTitle");
 const contact = document.querySelector(".contact");
 const main = document.querySelector("main");
 const removeDelay = () => {
+  if (backgroundBlack.classList.contains('active')) {
+    return;
+  }
+  else{
   main.classList.remove("active");
+  }
 };
 const activate = () => {
   if (personalInfo.classList.contains("active")) {
