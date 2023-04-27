@@ -14,7 +14,7 @@ letters = letters.split("");
 
 // Setting up the columns
 var fontSize = 10,
-  columns = canvas.width / fontSize;
+  columns = canvas.width / fontSize ;
 
 // Setting up the drops
 var drops = [];
@@ -43,7 +43,9 @@ setInterval(draw, 33);
 const personalInfo = document.querySelector('.personalDescription');
 const arrowIcon = document.querySelector('.arrow');
 const backgroundBlack = document.querySelector('.backgroundBlack');
-const icons = document.querySelector('.icons')
+const icons = document.querySelector('.icons');
+const contactTitle = document.querySelector('.contactTitle')
+const contact = document.querySelector('.contact')
 
 const activate = () =>{
   if (personalInfo.classList.contains('active')){
@@ -51,11 +53,15 @@ const activate = () =>{
     arrowIcon.classList.remove('active')
     backgroundBlack.classList.remove('active');
     icons.classList.remove('active');
+    contactTitle.classList.remove('active')
+    contact.classList.remove('active')
   }
   else{
   personalInfo.classList.add('active')
   arrowIcon.classList.add('active')
   backgroundBlack.classList.add('active')
   icons.classList.add('active');
+  contactTitle.classList.add('active')
+  contact.classList.add('active')
   }
 }
