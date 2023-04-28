@@ -43,35 +43,54 @@ setInterval(draw, 33);
 const personalInfo = document.querySelector(".personalDescription");
 const arrowIcon = document.querySelector(".arrow");
 const backgroundBlack = document.querySelector(".backgroundBlack");
-const icons = document.querySelector(".icons");
+const map = document.querySelector(".map");
 const contactTitle = document.querySelector(".contactTitle");
-const city = document.querySelector(".city");
+const contact = document.querySelector(".city");
 const main = document.querySelector("main");
+const phone= document.querySelector(".phone");
+const cake= document.querySelector(".cake");
+const envelope= document.querySelector(".envelope");
+const number= document.querySelector('.number')
+const birthday = document.querySelector('.birthday')
+const email = document.querySelector('.email')
 const removeDelay = () => {
-  if (backgroundBlack.classList.contains("active")) {
+  if (backgroundBlack.classList.contains('active')) {
     return;
-  } else {
-    main.classList.remove("active");
   }
+  else{
+  main.classList.remove("active");
+}
 };
 const activate = () => {
   if (personalInfo.classList.contains("active")) {
     personalInfo.classList.remove("active");
     arrowIcon.classList.remove("active");
     backgroundBlack.classList.remove("active");
-    icons.classList.remove("active");
+    map.classList.remove("active");
     contactTitle.classList.remove("active");
-    city.classList.remove("active");
-    main.classList.remove("blur");
-    setTimeout(removeDelay, 1000);
+    contact.classList.remove("active");
+    phone.classList.remove('active')
+    cake.classList.remove('active')
+    main.classList.remove('blur')
+    envelope.classList.remove('active')
+    number.classList.remove('active')
+    birthday.classList.remove('active')
+    email.classList.remove('active')
+    setTimeout(removeDelay, 1000)
   } else {
     personalInfo.classList.add("active");
     arrowIcon.classList.add("active");
     backgroundBlack.classList.add("active");
-    icons.classList.add("active");
+    map.classList.add("active");
     contactTitle.classList.add("active");
-    city.classList.add("active");
+    contact.classList.add("active");
     main.classList.add("active");
-    main.classList.add("blur");
+    phone.classList.add('active')
+    cake.classList.add('active')
+    envelope.classList.add('active')
+    number.classList.add('active')
+    birthday.classList.add('active')
+    email.classList.add('active')
+    main.classList.add('blur')
   }
 };
