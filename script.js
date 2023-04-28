@@ -31,7 +31,7 @@ function draw() {
     ctx.fillStyle = "#FFC000";
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
-    if (drops[i] * fontSize > canvas.height * 2 && Math.random() > 0.95) {
+    if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
       drops[i] = 0;
     }
   }
@@ -45,15 +45,14 @@ const arrowIcon = document.querySelector(".arrow");
 const backgroundBlack = document.querySelector(".backgroundBlack");
 const icons = document.querySelector(".icons");
 const contactTitle = document.querySelector(".contactTitle");
-const contact = document.querySelector(".contact");
+const city = document.querySelector(".city");
 const main = document.querySelector("main");
 const removeDelay = () => {
-  if (backgroundBlack.classList.contains('active')) {
+  if (backgroundBlack.classList.contains("active")) {
     return;
+  } else {
+    main.classList.remove("active");
   }
-  else{
-  main.classList.remove("active");
-}
 };
 const activate = () => {
   if (personalInfo.classList.contains("active")) {
@@ -62,17 +61,17 @@ const activate = () => {
     backgroundBlack.classList.remove("active");
     icons.classList.remove("active");
     contactTitle.classList.remove("active");
-    contact.classList.remove("active");
-    main.classList.remove('blur')
-    setTimeout(removeDelay, 1000)
+    city.classList.remove("active");
+    main.classList.remove("blur");
+    setTimeout(removeDelay, 1000);
   } else {
     personalInfo.classList.add("active");
     arrowIcon.classList.add("active");
     backgroundBlack.classList.add("active");
     icons.classList.add("active");
     contactTitle.classList.add("active");
-    contact.classList.add("active");
+    city.classList.add("active");
     main.classList.add("active");
-    main.classList.add('blur')
+    main.classList.add("blur");
   }
 };
