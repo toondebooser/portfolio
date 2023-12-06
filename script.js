@@ -24,7 +24,7 @@ for (var i = 0; i < columns; i++) {
 
 // Setting up the draw function
 function draw() {
-  ctx.fillStyle = "rgba(51, 51, 51, .5)";
+  ctx.fillStyle = "rgba(51, 51, 51, .3)";
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
@@ -40,6 +40,7 @@ function draw() {
 // Loop the animation
 setInterval(draw, 33);
 
+const leftBanner = document.querySelector(".leftBanner");
 const personalInfo = document.querySelector(".personalDescription");
 const arrowIcon = document.querySelector(".arrow");
 const backgroundBlack = document.querySelector(".backgroundBlack");
@@ -63,6 +64,7 @@ const removeDelay = () => {
 };
 const activate = () => {
   if (personalInfo.classList.contains("active")) {
+    leftBanner.classList.remove("active");
     personalInfo.classList.remove("active");
     arrowIcon.classList.remove("active");
     backgroundBlack.classList.remove("active");
@@ -78,6 +80,7 @@ const activate = () => {
     email.classList.remove('active')
     setTimeout(removeDelay, 1000)
   } else {
+    leftBanner.classList.add("active");
     personalInfo.classList.add("active");
     arrowIcon.classList.add("active");
     backgroundBlack.classList.add("active");
